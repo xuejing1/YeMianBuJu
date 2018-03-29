@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位</title>
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		/*相对定位 没有脱离标准流*/
+		.div1{
+			background-color: blue;
+			position: relative;
+			left: 20px;
+			top: 20px;
+		}
+		/*绝对定位 脱离标准流*/
+		.div2{
+			background-color: red;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+		.div3{
+			background-color: green;
+		}
+		span{
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+			position: absolute;
+			left: 10px;
+		}
+		.f{
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+		    position: absolute;
+		 /* position: relative;*/
+		}
+		.s{
+			width: 250px;
+			height: 250px;
+			background-color: tomato;
+		/*	position: relative;*/
+		    /*position:absolute; 
+			right: 0px;*/
+		}
+		.ss{
+			width: 200px;
+			height: 200px;
+			background-color: skyblue;
+			/*position: relative;*/
+			position: absolute;
+			/*top: 20px;*/
+			right: 0px;
+		}
+		/*子元素相对于父元素居中*/
+		.f2{
+			width: 300px;
+			height: 300px;
+			border: 1px solid;
+			position: relative;
+			margin: 0 auto;
+		}
+		.s2{
+			background-color: skyblue;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 50%;
+			margin-left: -50px;
+		}
+		/*子元素相对于父元素的定位 padding和border的影响*/
+		.f3{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			position: relative;
+			margin: 0 auto;
+			padding-bottom: 10px;
+			border: 10px solid;
+		}
+		.s3{
+			width: 50px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+			bottom: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1"></div>
+	<div class="div2"></div>
+	<div class="div3"></div>
+	<span>我是span</span>
+	<div class="f">
+		<div class="s">
+			<div class="ss"></div>
+		</div>
+	</div>
+	<div class="f2">
+		<div class="s2"></div>
+	</div>
+	<div class="f3">
+		<div class="s3"></div>
+	</div>
+</body>
+</html>
